@@ -1,0 +1,15 @@
+<div class= "header">
+  <h1>Add review</h1>
+</div>
+
+<div class="form-container">
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content, class: "col-m-4 control-label" %>
+    <%= f.input :rating, class: "form-control" %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<div class= "task-action-container">
+  <%= link_to "Back to restaurants", restaurants_path %>
+</div>
