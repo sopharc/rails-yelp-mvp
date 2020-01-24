@@ -1,8 +1,14 @@
-<div class = "header">
+<head>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);">
+  <div class="container">
     <h1><%= @restaurant.name %></h1>
-   </div>
+    <h3><%= @restaurant.address %></h3>
+  </div>
+</div>
 
-<div>
+</head>
+
+<div class= "review-items">
   <ul>
     <% @restaurant.reviews.each do |review| %>
       <li>
@@ -13,4 +19,8 @@
   </ul>
 </div>
 
-  <li><%= link_to "Add a review for this restaurant", new_restaurant_review_path(@restaurant) %></li>
+
+<div class= 'page-action-links'>
+  <li><%= link_to "Like this restaurant? Leave a review", new_restaurant_review_path(@restaurant) %></li>
+  <li><%= link_to "Back to home", restaurants_path(@restaurant) %></li>
+</div>

@@ -1,14 +1,29 @@
-<div class= "header" >
-    <h1>Restaurants</h1>
+<head>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80);">
+  <div class="container">
+    <h1>Yelp helps you find the best food reviewed by <strong> real foodies</strong></h1>
+  </div>
 </div>
 
-<div class = "container">
- <ul>
+</head>
+<div class= "header" >
+
+</div>
+
+<div class="row mt-4">
   <% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %>
-    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+    <div class="col-4">
+      <%= link_to restaurant_path(restaurant) do %>
+        <div class="card mb-4">
+          <img src=<%= "https://source.unsplash.com/800x600/?restaurant/#{rand(50)}" %> >
+          <div class="card-infos">
+            <h2><%= restaurant.name %></h2>
+            <p><%= restaurant.address %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
- </ul>
 </div>
 
 

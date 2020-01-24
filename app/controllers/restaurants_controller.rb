@@ -4,9 +4,6 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    # add a new restaurant and be redirected to the show view of that restaurant
-    # GET "restaurants/new"
-    # POST "restaurants"
     @restaurant = Restaurant.new
   end
 
@@ -20,7 +17,6 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    # see details of a restaurant with all reviews related
     @restaurant = Restaurant.find(params[:id])
   end
 

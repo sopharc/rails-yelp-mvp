@@ -12,7 +12,7 @@
 @import "components/index";
 @import "pages/index";
 
-
+// navbar
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -25,6 +25,8 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+// cards
 
 .card-product {
   overflow: hidden;
@@ -57,4 +59,23 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+// links
+
+.page-action-links {
+  list-style-type: none;
+  font-size: 14px;
+  padding: 25px 25px;
+
+}
+
+.review-items li {
+  list-style-type: none;
+  font-size: 14px
+}
+// form
+
+.form-container {
+  padding: 25px 25px;
 }
